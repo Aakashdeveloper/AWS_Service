@@ -1,0 +1,11 @@
+OnPrim
+
+cloud
+hybrid> oprim+cloud
+multiCloud> aws+gcp+azure
+
+
+IAAS => Infrastructure as a service (Ec2)
+PAAS => Platform as a service (Bring your code)(Elastic BeanStalk)
+SAAS => Software as Service(Free RTOS,WorkMail)
+
