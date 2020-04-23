@@ -1,2 +1,8 @@
   Access resource from diff account
   Ec2
+
+
+  {
+      "name":"sss",
+      "class":"ddd"
+  }
