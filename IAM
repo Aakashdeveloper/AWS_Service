@@ -129,11 +129,15 @@ Acc1 (Aakash Handa)  Sender
 
 
 
-Acc2 (Aakash)  Reciver
+**Root user(reciver) cannot access any other
+**Only IAM user(reciver) can accesss any other account resource
+
+>>>>>>Acc2 (Aakash)  Reciver<<<<<<<<<<<
 ** Access S3 of aakashhanda account
 =>  Create new IAM user(with no permission no group)
     
- => Create new dummyGroup(no user no policy)   
+ => Create new dummy Group(no user no policy)   
+ 
     =>Select create group
         =>Permission
             =>Add Inline Policies
