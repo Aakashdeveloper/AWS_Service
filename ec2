@@ -71,6 +71,8 @@ Dedicate Host        => Dedicated physical Machine for my VM
 => cd /var/www/html
 => vi index.html
 => <h1>Hi welcome</h1>
+=> press Ecs
+=> :wq!
 => chmod 755 index.html
 => service httpd start
 => chkconfig httpd on
@@ -80,6 +82,8 @@ Dedicate Host        => Dedicated physical Machine for my VM
         <h1>Linux Machine</h1>
 </div>
 
+//node > 
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
 
 /************************
     Use Windows  as web server
@@ -215,4 +219,9 @@ CodePipeLine
 Ecs 
 
 
+Public
+13.229.129.153
+3.0.19.185
 
+Private
+172.31.25.163
