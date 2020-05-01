@@ -1,0 +1,102 @@
+www.    aakashanda     .me
+host    subdomain       top level domain
+
+A record => help to map domain Name to IP address
+        A record for IPv4 
+        AAAA fro IPv6
+
+FQDN
+Fully Qualified Domain Name
+
+
+
+IAM
+VPC
+EC2
+LoadBalance
+AutoScale
+S3
+Route53
+EBS
+LightSail
+Elastic Bean Stack
+
+
+Ec2 => Route53
+S3=> Route53
+ELB
+
+/***********************
+Create Hosted Zone
+**********************/
+Route53
+     Create Hosted Zone
+        =>Provide
+        DoaminName              Type
+        aakashhanda.xyz         Public
+                => Add the NS records in your Domain Server
+                        (bigrock, godaddy)
+
+
+/***********************
+    Host A Website(Ec2)
+**********************/
+=>Create One public Ec2 with app
+    =>Add Http in both inbound and outbound rule
+        =>Create record Set(route53)
+                =>Provide 
+                Name         Type        Value        Routig Policy
+        Keep it blank       Arecrod      Public IP      Simple
+
+/***********************
+    Host A Website(S3 Bucket)
+**********************/
+=>Create One S3 Bucket
+        =>Create Static Website Hosting in S3 Bucket
+                =>Create record Set(route53)
+                        =>Alias(yes)
+                                =>From S3 drop down
+                                        =>Select S3 instance
+                                                =>Routing Policy(simple)
+                                                        =>Create
+
+/***********************
+    For Weight Routing
+**********************/
+=>Create Record Set 
+        =>Add IP
+        =>Type(weight)
+                =>Provide
+                Weight        SetID
+                2             First
+
+**We have to provide weight between 0 -255
+        0 Is not active machine
+
+** % weight is decided by weight of machine/Total weigh
+8+7+11=26
+8/26 = 30%
+7/26 = 27%
+11/26 = 42%
+========99%
+
+4+8+7+11=30
+
+
+4/30 = 13%   
+8/30 =26%
+7/30 = 23%
+11/30 = 36%
+
+
+/***********************
+    For Failover Routing
+**********************/
+=> Create Health Check
+        =>Provide
+        Name    ServerIP     HealthCheckUrl
+        TestApp 10.0.01.1     inex.html
+                =>Create Record Set
+                        =>Add IP        
+                          =>Type FailOver Routing
+                                =>Set Primary or Secondary

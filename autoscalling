@@ -47,3 +47,14 @@ prequest
     =>Open terminal
         =>type "stress"
         =>type "remove stress"
+
+launch AS group every machine must have stree package 
+after it add undeer load balancer
+=> Connect with launched Ec2
+    =>Open terminal
+        =>type "stress"
+        check new machine got added or not
+        =>type "remove stress"
+        check  machine got removed  or not
+
+

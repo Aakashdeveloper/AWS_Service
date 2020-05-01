@@ -1,0 +1,27 @@
+PAAS
+PlatForm as a Service
+
+
+RollNo English Hindi comp
+1       80
+2       80       80
+3                     80
+
+[
+    {
+        rollno:1,
+        English:80
+    },
+     {
+        rollno:2,
+        Hindi:80
+    },
+    {
+        rollno:3,
+        Comp:80
+    }
+]
+
+
+
+

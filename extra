@@ -8,9 +8,8 @@
   }
 
 
+RDS
+s3
+route53
 
-  elastic bean stack
-  lambda
-  s3
-
-  vpc
+vpc
